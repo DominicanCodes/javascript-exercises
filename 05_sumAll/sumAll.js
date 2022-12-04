@@ -8,11 +8,10 @@ const sumAll = function(start, end) {
         let temp = end;
         end = start;
         start = temp;
-    } else if (start < 0 
-        || end < 0 
-        || isNaN(start) || isNaN(end)
-        || typeof(start) !== 'string'
-        || typeof(end) !== 'string') {
+    } else if (isNaN(start) || isNaN(end)
+        || typeof(start) == 'string'
+        || typeof(end) == 'string'
+        || start < 0 || end < 0) {
         return 'ERROR';
     }
 
